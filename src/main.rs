@@ -19,6 +19,10 @@ println!("9 / 2 = {} but 9.0 / 2.0 = {} answer is {}", 9u32 / 2, 9.0 / 2.0, text
 
 let sample = (2i32,true,'C');
 println!("The last item of the element is {}",sample.2);
+println!("The first item of the element is {}",sample.0);
+println!("The second item of the element is {}",sample.1);
+
+
 
 
 }
