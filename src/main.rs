@@ -22,7 +22,13 @@ println!("The last item of the element is {}",sample.2);
 println!("The first item of the element is {}",sample.0);
 println!("The second item of the element is {}",sample.1);
 
-
+let formal: bool = false;
+let greeting = if formal { // "if" keyword used here as an expression
+    "Good day to you."     // Returns the string "Good day to you."
+} else {
+    "Hey!"                 // Returns the string "Hey!" 
+};
+println!("{}", greeting)   // Prints "Good day to you."
 
 
 }
