@@ -1,6 +1,7 @@
 #![allow(non_snake_case)]
 //declaring a struct
 struct Student {name: String, isAbsent: bool, attendance:u8}
+struct Teacher(String,f32,char,bool);
 
 fn main()  {
     // let mut about; 
@@ -34,5 +35,8 @@ println!("{}", greeting);   // Prints "Good day to you."
 // instantiating
 let student = Student{name:String::from("Boluwatife"),isAbsent:false,attendance:5};
 println!("Name is {} has attendance {} and his absence is {}",student.name,student.attendance,student.isAbsent);
+let teacher = Teacher(String::from("Boluwatife"),10.4,'b',true);
+println!("{} is the name with height {}, first name begins with {}, loves coding is {}
+", teacher.0,teacher.1,teacher.2,teacher.3 );  
 
 }
