@@ -1,4 +1,6 @@
 #![allow(non_snake_case)]
+//declaring a struct
+struct Student {name: String, isAbsent: bool, attendance:u8}
 
 fn main()  {
     // let mut about; 
@@ -28,7 +30,9 @@ let greeting = if formal { // "if" keyword used here as an expression
 } else {
     "Hey!"                 // Returns the string "Hey!" 
 };
-println!("{}", greeting)   // Prints "Good day to you."
-
+println!("{}", greeting);   // Prints "Good day to you."
+// instantiating
+let student = Student{name}
+println!("{}",Student.attendance);
 
 }
