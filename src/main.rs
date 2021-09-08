@@ -32,7 +32,7 @@ let greeting = if formal { // "if" keyword used here as an expression
 };
 println!("{}", greeting);   // Prints "Good day to you."
 // instantiating
-let student = Student{name}
-println!("{}",Student.attendance);
+let student = Student{name:String::from("Boluwatife"),isAbsent:false,attendance:5};
+println!("Name is {} has attendance {} and his absence is {}",student.name,student.attendance,student.isAbsent);
 
 }
