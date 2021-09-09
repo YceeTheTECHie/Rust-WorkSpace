@@ -1,15 +1,13 @@
 #![allow(non_snake_case)]
+#[derive(Debug)]
 //declaring a struct
 struct Student {name: String, isAbsent: bool, attendance:u8}
 struct Teacher(String,f32,char,bool);
-enum Example {
-    // An enum variant can be like a unit struct without fields or data types
-        firstExample,
-        // An enum variant can be like a unit struct with  data types like tuple structs
-        secondExample(String,char),
-        // An enum variant can be like a unit struct with fields and data types
-        thirdExample{name:String,page:u8}
+enum GenderCategory {
+    Male,Female
 }
+
+struct Person{name:String, gender:GenderCategory }
 fn main()  {
     // let mut about; 
     // about = "tool";
@@ -45,6 +43,10 @@ println!("Name is {} has attendance {} and his absence is {}",student.name,stude
 let teacher = Teacher(String::from("Boluwatife"),10.4,'b',true);
 println!("{} is the name with height {}, first name begins with {}, loves coding is {}
 ", teacher.0,teacher.1,teacher.2,teacher.3 );  
-
+// working with struct and enums
+let p1 = Person{name:String::from("Person"), gender:GenderCategory::Male};
+let p2 = Person{name:String::from("Bolu"), gender:GenderCategory::Female};
+   println!("{:?}",p1);
+   println!("{:?}",p2)
 
 }
