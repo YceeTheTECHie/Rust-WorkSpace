@@ -1,13 +1,13 @@
 #![allow(non_snake_case)]
-#[derive(Debug)]
+
 //declaring a struct
 struct Student {name: String, isAbsent: bool, attendance:u8}
 struct Teacher(String,f32,char,bool);
-enum GenderCategory {
-    Male,Female
-}
+// enum GenderCategory {
+//     Male,Female
+// }
 
-struct Person{name:String, gender:GenderCategory }
+// struct Person{name:String, gender:GenderCategory }
 fn main()  {
     // let mut about; 
     // about = "tool";
@@ -44,9 +44,19 @@ let teacher = Teacher(String::from("Boluwatife"),10.4,'b',true);
 println!("{} is the name with height {}, first name begins with {}, loves coding is {}
 ", teacher.0,teacher.1,teacher.2,teacher.3 );  
 // working with struct and enums
-let p1 = Person{name:String::from("Person"), gender:GenderCategory::Male};
-let p2 = Person{name:String::from("Bolu"), gender:GenderCategory::Female};
-   println!("{:?}",p1);
-   println!("{:?}",p2)
+// let p1 = Person{name:String::from("Person"), gender:GenderCategory::Male};
+// let p2 = Person{name:String::from("Bolu"), gender:GenderCategory::Female};
+//    println!("{:?}",p1);
+//    println!("{:?}",p2)
+
+
+// Declare array, initialize all values, compiler infers length = 7
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  
+// Declare array, first value = "0", length = 5
+let bytes = [0; 5];
+
+println!("{}, {}", days[0],bytes[0]);
+
 
 }
