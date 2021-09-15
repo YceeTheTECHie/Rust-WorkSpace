@@ -54,9 +54,20 @@ println!("{} is the name with height {}, first name begins with {}, loves coding
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   
 // Declare array, first value = "0", length = 5
-let bytes = [0; 5];
+let bytes = [0;5];
 
-println!("{}, {}", days[0],bytes[0]);
+println!("{}, {}", days[0],bytes[1]);
 
+let time = vec![0,1,3,5];
+
+println!("{}", time[0]);
+
+// Create empty vector, declare vector mutable so it can grow and shrink
+let mut fruit = Vec::new();
+// Push values onto end of vector, type changes from generic `T` to String
+fruit.push("Apple");
+fruit.push("Banana");
+fruit.push("Cherry");
+println!("Fruits: {:?}", fruit);
 
 }
