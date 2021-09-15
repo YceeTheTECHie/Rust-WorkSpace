@@ -70,4 +70,31 @@ fruit.push("Banana");
 fruit.push("Cherry");
 println!("Fruits: {:?}", fruit);
 
+
+use std::collections::HashMap;
+
+let mut reviews : HashMap<String, String> = HashMap::new();
+
+reviews.insert("hello".to_string(), "there".to_string());
+reviews.insert("hi".to_string(), "there".to_string());
+
+let firstGreeting : &str = "hello";
+println!("{:?}", reviews.get(firstGreeting));
+
+
+let mut marks = HashMap::new();
+
+
+marks.insert("Mathematics",90);
+marks.insert("English Language",80);
+marks.insert("Biology",70);
+marks.insert("History",50);
+marks.insert("ICT",100);
+
+
+match marks.get("Biology"){
+    Some(mark) => println!("found the score of the course and its {}", mark),
+    None => println!("course was not found")
+}
+// println!("{:?}", marks.get(number));
 }
