@@ -84,6 +84,7 @@ println!("{:?}", reviews.get(firstGreeting));
 
 let mut marks = HashMap::new();
 
+// adding a value
 
 marks.insert("Mathematics",90);
 marks.insert("English Language",80);
@@ -91,10 +92,60 @@ marks.insert("Biology",70);
 marks.insert("History",50);
 marks.insert("ICT",100);
 
+// finding a value in a hashmap
+println!("{:?}", marks);
 
-match marks.get("Biology"){
-    Some(mark) => println!("found the score of the course and its {}", mark),
-    None => println!("course was not found")
-}
+
 // println!("{:?}", marks.get(number));
+
+// removing values in a hashmap
+marks.remove("Mathematics");
+println!("{:?}", marks);
+
+// finding the total value of key-values in a hashmap
+
+println!("{:?}", marks.len());
+
+// looping through an hashmap
+
+for(subject,mark) in &marks{
+    println!("{} is {}", subject,mark);
+}
+// using the contains key and value method
+
+println!("did we study French {}", marks.contains_key("French"));
+// println!("did we study French {}", marks.contains_value("French"));
+let mut counter = 1;
+// stop_loop is set when loop stops
+let stop_loop = loop {
+    counter *= 2;
+    if counter > 100 {
+        // Stop loop, return counter value
+        break counter;
+    }
+};
+// Loop should break when counter = 128
+println!("Break the loop at counter = {}.", stop_loop);
+
+let big_birds = ["ostrich", "peacock", "stork"];
+for bird in big_birds.iter() {
+    println!("The {} is a big bird.", bird);
+}
+
+// let arr = vec![1,2,3,5];
+// println!("{}", arr[10]);
+
+// handling errors
+use std::fs::File;
+
+let f = File::open("hey.txt");
+
+
+let f = match f {
+    Ok(file) => file,
+    Err(error) => panic!("cant open file {:?}", error),
+};
+
+println!("executing f {:?}", f);
+
 }
