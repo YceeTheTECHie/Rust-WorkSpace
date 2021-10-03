@@ -144,8 +144,20 @@ for bird in big_birds.iter() {
 
 // closures
 
+
+let mut test = String::from("hello");
+test.to_string();
+test.push('w');
+println!("{}", test);
+
+
 let diff = |n1:i32, n2:i32| n1 - n2;
 println!("diff is {}", diff(8,3));
+
+let msg1 : &str =  "hey";
+let msg2 = &msg1;
+
+println!("{} {}", msg1, msg2);
 // let arr = vec![1,2,3,5];
 // println!("{}", arr[10]);
 
@@ -164,5 +176,41 @@ println!("diff is {}", diff(8,3));
 
 // 
 
+
+// implemting structs
+
+struct Person {
+    first_name : String,
+    last_name : String,
+}
+
+impl Person {
+    fn new (first:&str,last:&str) -> Person{
+        Person{
+             first_name : first.to_string(),
+             last_name : last.to_string(),
+        }
+    }
+
+    fn fullName(&self) -> String{
+        format!("{} {}", &self.first_name, &self.last_name)
+    }
+
+    fn changeFirstName(&mut self,first:&str) {
+        self.first_name = first.to_string();
+    }
+
+    fn toTuple(self) -> (String,String) {
+        (self.first_name, self.last_name)
+    }
+}
+
+let mut p = Person::new("James", "Bond");
+// println!("name is {} {}", p.first_name,p.last_name);
+println!("name is {}", p.fullName());
+p.changeFirstName("tade");
+println!("name changed, {:?}",p.fullName());
+println!("name changed, {:?}",p.fullName());
+println!("person struct to tuple, {:?}", p.toTuple());
 
 }
