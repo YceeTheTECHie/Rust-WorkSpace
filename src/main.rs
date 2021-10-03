@@ -132,20 +132,37 @@ for bird in big_birds.iter() {
     println!("The {} is a big bird.", bird);
 }
 
+
+// let fruits = vec!["banana", "apple", "coconut", "orange", "strawberry"];
+// for index in [0, 2, 99].iter() {
+//     match fruits.get(index) {
+//         Some(fruit_name) => println!("It's a delicious {}!", fruit_name),
+//         None => println!("There is no fruit! :("),
+//     }
+// }
+
+
+// closures
+
+let diff = |n1:i32, n2:i32| n1 - n2;
+println!("diff is {}", diff(8,3));
 // let arr = vec![1,2,3,5];
 // println!("{}", arr[10]);
 
 // handling errors
-use std::fs::File;
+// use std::fs::File;
 
-let f = File::open("hey.txt");
+// let f = File::open("./hey.txt");
 
 
-let f = match f {
-    Ok(file) => file,
-    Err(error) => panic!("cant open file {:?}", error),
-};
+// let f = match f {
+//     Ok(file) => file,
+//     Err(error) => panic!("cant open file {:?}", error),
+// };
 
-println!("executing f {:?}", f);
+// println!("executing f {:?}", f);
+
+// 
+
 
 }
